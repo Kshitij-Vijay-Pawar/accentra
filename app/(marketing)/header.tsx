@@ -27,16 +27,11 @@ export const Header = () => {
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
           </SignedIn>
-          <div >
             <SignedOut >
               <SignInButton mode="modal" afterSignInUrl="/learn" afterSignUpUrl="/learn">
                 <Button size="lg" variant="ghost" >Login</Button>
               </SignInButton>
-              <SignUpButton mode="modal" afterSignInUrl="/learn" afterSignUpUrl="/learn">
-                <Button size="lg" variant="ghost"> Signup </Button>
-              </SignUpButton>
             </SignedOut>
-          </div>
         </ClerkLoaded>
       </div>
     </header>
