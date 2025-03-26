@@ -31,3 +31,11 @@ export const getCourseById = cache(async (courseId: number) => {
     });
     return data;
 });
+
+export const insertCourse = async (title: string, imageSrc: string) => {
+    const data = await db.insert(courses).values({
+        title,
+        imageSrc,
+    }).returning();
+    return data;
+};
