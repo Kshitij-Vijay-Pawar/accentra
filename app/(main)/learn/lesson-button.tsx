@@ -45,9 +45,7 @@ export const LessonButton = ({
     const isLast = index === totalCount;
     const isCompleted = !locked && !current;
     const Icon = isCompleted ? Check : isLast ? Crown : Star;
-    // link is not created yat
-    // `/lesson/${id}`
-    const href = locked ? "#" : `/lesson`;
+    const href = locked ? "#" : `/lesson/${id}`;
 
 
     return (
