@@ -7,6 +7,7 @@ import { StickyWrapper } from "@/components/sticky-wrapper";
 import { Progress } from "@/components/ui/progress";
 import { UserProgress } from "@/components/user-progress";
 // import { QUESTS } from "@/constants";
+import { Quests } from "@/components/quests";
 import { getUserProgress, getUserSubscription } from "@/db/queries";
 
 
