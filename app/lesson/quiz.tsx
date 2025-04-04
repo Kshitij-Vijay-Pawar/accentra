@@ -1,6 +1,6 @@
 "use client";
 
-import { challengeOptions, challenges, lessons } from "@/db/schema";
+import { challengeOptions, challenges, lessons, userSubscription } from "@/db/schema";
 import { useState, useTransition } from "react";
 import { toast } from "sonner";
 import { Header } from "./header";
@@ -25,7 +25,7 @@ type Props = {
         completed: boolean;
         challengeOptions: (typeof challengeOptions.$inferSelect)[];
     })[];
-    userSubscription: any;
+    userSubscription: typeof userSubscription.$inferSelect & {isActive: boolean} | null;
 }
 
 export const Quiz = ({

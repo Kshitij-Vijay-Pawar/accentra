@@ -9,8 +9,9 @@ export const courses = pgTable("courses", {
 
 export const courseRelations = relations(courses, ({many }) => ({
     userProgress: many(userProgress),
-    usits: many(units)
+    units: many(units)
 }));
+
 
 
 export const units = pgTable("units", {
