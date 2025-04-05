@@ -18,7 +18,9 @@ export const units = pgTable("units", {
     id: serial("id").primaryKey(),
     title: text("title").notNull(),
     description: text("description").notNull(),
-    courseId: integer("course_id").references(() => courses.id, { onDelete: "cascade" }).notNull(),
+    courseId: integer("course_id")
+.references(() => courses.id, { onDelete: "cascade", onUpdate: "cascade" }) // Add cascade behavior
+.notNull(),
     order: integer("order").notNull(),
 });
 
