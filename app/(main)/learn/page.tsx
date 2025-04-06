@@ -11,7 +11,6 @@ import { Quests } from "@/components/quests";
 
 
 
-
 const LearnPage = async () => {
 
     const userSubcriptionData = getUserSubscription();

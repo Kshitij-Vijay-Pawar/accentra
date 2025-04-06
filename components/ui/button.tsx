@@ -43,12 +43,11 @@ function Button({
   variant,
   size,
   asChild = false,
-  afterSignInUrl, // Destructure the custom prop to exclude it from being passed to the DOM
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
-    afterSignInUrl?: string // Add the custom prop type if needed
+    
   }) {
   const Comp = asChild ? Slot : "button"
 

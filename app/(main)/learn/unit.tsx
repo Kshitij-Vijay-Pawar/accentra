@@ -1,4 +1,4 @@
-import { lessons, challengeProgress, challenges, units } from "@/db/schema"
+import { lessons, units } from "@/db/schema"
 import { UnitBanner } from "./unit-banner"
 import { LessonButton } from "./lesson-button";
 
@@ -18,8 +18,6 @@ type Props ={
 }
 
 export const Unit = ({
-    id,
-    order,
     title,
     description,
     lessons,

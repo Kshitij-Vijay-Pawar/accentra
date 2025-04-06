@@ -1,6 +1,5 @@
 "use client"
 
-import { headers } from "next/headers";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useTransition } from "react";

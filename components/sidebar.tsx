@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SidebarItem } from "@/components/sidebar-item";
 import { ClerkLoaded, ClerkLoading, UserButton } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
+import Image from "next/image";
 
 type Props = {
     className?: string;
@@ -15,7 +16,7 @@ export const Sidebar = ({ className }: Props) => {
             <Link href="/learn">
 
                 <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
-                    <img src="/logo.png" alt="logo" className="h-15" />
+                    <Image src="/logo.png" alt="logo" width={60} height={60} />
                     <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
                         Accentra
                     </h1>

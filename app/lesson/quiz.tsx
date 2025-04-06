@@ -1,6 +1,6 @@
 "use client";
 
-import { challengeOptions, challenges, lessons, userSubscription } from "@/db/schema";
+import { challengeOptions, challenges, userSubscription } from "@/db/schema";
 import { useState, useTransition } from "react";
 import { toast } from "sonner";
 import { Header } from "./header";
@@ -8,7 +8,7 @@ import { QuestionBubble } from "./question-bubble";
 import { Challenge } from "./challenge";
 import { Footer } from "./footer";
 import { upsertChallengeProgress } from "@/actions/challenge-progress";
-import { reduceHearts, updateUserProgress } from "@/actions/user-progress";
+import { reduceHearts} from "@/actions/user-progress";
 import { useAudio, useWindowSize, useMount} from "react-use";
 import Image from "next/image";
 import { ResultCard } from "./result-card";
@@ -50,8 +50,8 @@ export const Quiz = ({
     const router = useRouter();
     const [lessonId] = useState(initialLessonId)
 
-    const [correctAudio, _c, correctControls] = useAudio({src: "/correct.wav"});
-    const [incorrectAudio, _i, incorrectControls] = useAudio({src: "/incorrect.wav"});
+    const [correctAudio, , correctControls] = useAudio({src: "/correct.wav"});
+    const [incorrectAudio, , incorrectControls] = useAudio({src: "/incorrect.wav"});
 
     const [pending, startTransition] = useTransition();
 
@@ -100,7 +100,7 @@ export const Quiz = ({
                         width={50}
                     />
                     <h1 className="text-xl lg:text-3xl font-bold text-neutral-700">
-                        Great job! <br />You've completed the lesson.
+                        Great job! <br />You&apos;ve completed the lesson.
                     </h1>
                     <div className="flex items-center gap-x-4 w-full">
                         <ResultCard 
@@ -159,7 +159,7 @@ export const Quiz = ({
                         return;
                     }
 
-                    correctControls.play(),
+                    correctControls.play();
                     setStatus("correct");
                     setPercentage((prev) => prev + 100 / challenges.length)
                     
@@ -180,7 +180,7 @@ export const Quiz = ({
                     }
 
                     
-                    incorrectControls.play(),
+                    incorrectControls.play();
                     setStatus("wrong");
                     if(!response?.error) {
                         setHearts((prev) => Math.max(prev - 1, 0))

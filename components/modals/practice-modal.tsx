@@ -7,8 +7,7 @@ import { Dialog,
     DialogDescription,
     DialogFooter,
     DialogHeader, 
-    DialogTitle, 
-    DialogTrigger 
+    DialogTitle 
 } from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button"
 import { usePracticeModal } from "@/store/use-practice-modal";
