@@ -7,8 +7,9 @@ import { getIsAdmin } from "@/lib/admin";
 
 export const GET = async (
   _req: NextRequest,
-  { params }: { params: { courseId: number } }
+  context: { params: Promise<{ courseId: number }> }
 ) => {
+  const params = await context.params;
   const isAdmin = getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
@@ -21,10 +22,10 @@ export const GET = async (
 
 export const PUT = async (
   req: NextRequest,
-  context: { params: { courseId: string } }
+  context: { params: Promise<{ courseId: string }> }
 ) => {
-const { params } = context;
-  const courseId = await params.courseId; // Await the params
+  const params = await context.params;
+  const courseId = parseInt(params.courseId); // Parse the courseId as integer
 
   const isAdmin = await getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
@@ -36,7 +37,7 @@ const { params } = context;
     .set({
       ...body,
     })
-    .where(eq(courses.id, parseInt(courseId))) // Ensure courseId is parsed as an integer
+    .where(eq(courses.id, courseId))
     .returning();
 
   return NextResponse.json(data[0]);
@@ -44,8 +45,9 @@ const { params } = context;
 
 export const DELETE = async (
   _req: NextRequest,
-  { params }: { params: { courseId: number } }
+  context: { params: Promise<{ courseId: number }> }
 ) => {
+  const params = await context.params;
   const isAdmin = getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
