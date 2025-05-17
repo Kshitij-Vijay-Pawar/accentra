@@ -12,7 +12,9 @@
     "db:seed": "tsx scripts/seed.ts",
     "db:reset": "tsx ./scripts/reset.ts",
     "db:prod": "tsx ./scripts/prod.ts",
-    "db:proden": "tsx ./scripts/english-prod.ts"
+    "db:proden": "tsx ./scripts/english-prod.ts",
+    "export": "next export",
+    "deploy": "next build && next export && gh-pages -d out"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.13.0",
@@ -52,6 +54,7 @@
     "drizzle-kit": "^0.30.5",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "tsx": "^4.19.3",
     "typescript": "^5"
