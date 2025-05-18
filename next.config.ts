@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: 'export',
-  basePath: '/accentra',
-  assetPrefix: '/accentra/',
+
   images: {
     unoptimized: true,
     remotePatterns: [
