@@ -10,11 +10,11 @@ import { getUserProgress, getUserSubscription } from "@/db/queries";
 
 
 const QUESTS = [
-  { title: "Complete 1 lesson", value: 10 },
-  { title: "Complete 5 lessons", value: 50 },
-  { title: "Complete 10 lessons", value: 12 },
+  { title: "Complete 1 lesson", value: 1 },
+  { title: "Complete 5 lessons", value: 5 },
+  { title: "Complete 10 lessons", value: 10 },
   { title: "Complete 20 lessons", value: 20 },
-  { title: "Complete 50 lessons", value: 60 },
+  { title: "Complete 50 lessons", value: 50 },
 ]
 
 const QuestsPage = async () => {
