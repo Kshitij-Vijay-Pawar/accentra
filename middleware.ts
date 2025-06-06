@@ -14,6 +14,7 @@ export const config = {
     '/dashboard(.*)',
     '/lesson(.*)',
     '/quests(.*)',
+    '/chat-bot(.*)',
     '/api/(.*)',
   ],
 };
