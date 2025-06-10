@@ -28,6 +28,7 @@ export const Sidebar = ({ className }: Props) => {
                 <SidebarItem label="Leaderbord" href="/leaderbord" iconSrc="/leaderboard.svg"/>
                 <SidebarItem label="Quests" href="/quests" iconSrc="/quests.svg"/>
                 <SidebarItem label="Shop" href="/shop" iconSrc="/shop.svg"/>
+                <SidebarItem label="chat Bot" href="/chat-bot" iconSrc="/pandus.svg"/>
             </div>
             <div className="p-4">
                 <ClerkLoading>

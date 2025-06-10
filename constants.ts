@@ -1,4 +1,4 @@
-export const MAX_HEARTS = 3;
+export const MAX_HEARTS = 5;
 export const POINTS_TO_REFILL = 10;
 export const quests = [
     { title: "Complete 1 lesson", value: 10 },

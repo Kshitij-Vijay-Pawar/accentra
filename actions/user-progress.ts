@@ -84,7 +84,7 @@ export const reduceHearts = async (challengeId: number) => {
     if(!currentUserProgress){
         throw new Error("User Progress not Found"); 
     }
-    if(!userSubscription?.isActive){
+    if(userSubscription?.isActive){
         return { error: "subscription" };
     }
     if(currentUserProgress.hearts === 0){

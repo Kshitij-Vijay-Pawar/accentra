@@ -178,9 +178,9 @@ const ChatSection = () => {
       className="msger w-full h-full max-w-2xl border border-gray-300 rounded-lg shadow-md bg-white flex flex-col"
       style={{ minHeight: "400px" }}
     >
-      <header className="msger-header p-4 bg-blue-600 text-white border-b border-gray-300 flex justify-between items-center rounded-t-lg">
+      <header className="msger-header p-4 bg-blue-600 text-white border-b border-gray-300 flex justify-between items-center rounded-t-mg">
         <div className="msger-header-title text-lg font-semibold">
-          <i className="fas fa-comment-alt mr-2" /> Duolingo Practice Chat
+          <i className="fas fa-comment-alt mr-2" /> Accentra Conversation Practice
         </div>
         <div className="msger-header-options"></div>
       </header>
@@ -249,7 +249,7 @@ const ChatSection = () => {
         <Button
           variant="secondary"
           type="submit"
-          className="ml-2 bg-blue-600 hover:bg-blue-700 text-white"
+          className="ml-2 hover:bg-blue-700 text-white"
         >
           Send
         </Button>
